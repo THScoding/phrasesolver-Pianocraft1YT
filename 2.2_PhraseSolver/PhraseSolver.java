@@ -10,7 +10,12 @@ public class PhraseSolver
   /* your code here - attributes */
 
   /* your code here - constructor(s) */ 
-
+  public PhraseSolver(){
+    player1 = null;
+    player2 = null;
+    board = null;
+    solved = false;
+  }
   public void play()
   {
     boolean solved = false;

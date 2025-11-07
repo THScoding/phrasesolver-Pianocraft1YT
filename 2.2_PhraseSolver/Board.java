@@ -6,16 +6,24 @@
 import java.util.Scanner;
 import java.io.File;
 
-public class  Board
+public class Board
 {
   private String solvedPhrase;
   private String phrase;
   private int currentLetterValue; 
 
   /* your code here - constructor(s) */ 
-  
+  public Board() {
+    solvedPhrase = "";
+    phrase = "";
+    currentLetterValue = 0;
+  }
+
   /* your code here - accessor(s) */
-  
+  public String getSolvedPhrase(){
+    return solvedPhrase;
+  }
+
   /* your code here - mutator(s)  */
 
 
