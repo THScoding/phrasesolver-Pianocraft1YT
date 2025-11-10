@@ -5,7 +5,7 @@
  */
 import java.util.Scanner;
 import java.io.File;
-
+import java.lang.Math;
 public class Board
 {
   private String solvedPhrase;
@@ -20,8 +20,21 @@ public class Board
   }
 
   /* your code here - accessor(s) */
+  public int getLetterValue(){
+    return currentLetterValue;
+  }
+  public void addLetterValue(){
+    currentLetterValue++;
+  }
+  public solvePhrase(String trySolve){
+     
+  }
   public String getSolvedPhrase(){
     return solvedPhrase;
+  }
+  public void setPhrase(){
+    int random = (int)(Math.random()*100);
+    String phrase = 
   }
 
   /* your code here - mutator(s)  */

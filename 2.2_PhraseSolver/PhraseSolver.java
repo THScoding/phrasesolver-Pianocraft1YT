@@ -33,7 +33,9 @@ public class PhraseSolver
       /* your code here - determine how game ends */
       solved = true; 
     } 
-   
+   // CODE TO ADD
+  System.out.println("Phrase: " + phrase); //temp test code
+
   }
   
 }

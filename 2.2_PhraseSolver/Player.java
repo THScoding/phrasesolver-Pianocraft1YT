@@ -16,6 +16,17 @@ public Player(){
   points = 0;
 }
   /* your code here - accessor(s) */ 
-
+public void setName(String N){
+  name = N;
+}
+public void addPoints(){
+  points++;
+}
+public getPoints(){
+  return points;
+}
+public getName(){
+  return name;
+}
   /* your code here - mutator(s) */ 
 }
