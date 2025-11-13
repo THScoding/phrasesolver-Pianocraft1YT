@@ -13,11 +13,12 @@ public class Board
   private int currentLetterValue; 
   private String possiblePhrases;
   private static boolean solved;
+
   /* your code here - constructor(s) */ 
   public Board() {
     solvedPhrase = "";
-    phrase = "";
-    currentLetterValue = 0;
+    phrase = this.getSolvedPhrase();
+    this.setLetterValue();;
     solved = false;
   }
 
@@ -25,9 +26,7 @@ public class Board
   public int getLetterValue(){
     return currentLetterValue;
   }
-  public void addLetterValue(){
-    currentLetterValue++;
-  }
+
   public void solvePhrase(String trySolve){
      if (trySolve.equals(phrase)){
       solved=true;

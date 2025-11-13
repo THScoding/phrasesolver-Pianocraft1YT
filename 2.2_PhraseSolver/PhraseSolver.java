@@ -8,27 +8,34 @@ import java.util.Scanner;
 public class PhraseSolver
 {
   /* your code here - attributes */
-
+    Player player1;
+    Player player2;
+    Board board;
   /* your code here - constructor(s) */ 
   public PhraseSolver(){
-    Player player1 = null;
-    Player player2 = null;
-    Board board = null;  }
+    player1 = new Player();
+    player2 = new Player();
+    board = new Board();  
+  }
+
+
   public void play()
   {
     boolean solved = false;
     int currentPlayer = 1;
 
-    Scanner input = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
     
-    boolean correct = true;
     while (!solved) 
     {
-      Board board = new Board();
+      System.out.println("Player 1 Name: ");
+      String name1 = sc.nextLine();
+      player1.setName(name1);
+      System.out.println("Player 2 Name: ");
+      String name2 = sc.nextLine();
+      player2.setName(name2);
       board.loadPhrase();
-      board.getSolvedPhrase();
-      
-      
+      System.out.println(board.getSolvedPhrase());
       /* your code here - determine how game ends */
       solved = true; 
     } 
