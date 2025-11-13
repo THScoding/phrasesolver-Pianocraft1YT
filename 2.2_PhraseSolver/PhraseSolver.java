@@ -11,11 +11,9 @@ public class PhraseSolver
 
   /* your code here - constructor(s) */ 
   public PhraseSolver(){
-    player1 = null;
-    player2 = null;
-    board = null;
-    solved = false;
-  }
+    Player player1 = null;
+    Player player2 = null;
+    Board board = null;  }
   public void play()
   {
     boolean solved = false;
@@ -26,15 +24,15 @@ public class PhraseSolver
     boolean correct = true;
     while (!solved) 
     {
-      
-      /* your code here - game logic */
+      Board board = new Board();
+      board.loadPhrase();
+      board.getSolvedPhrase();
       
       
       /* your code here - determine how game ends */
       solved = true; 
     } 
    // CODE TO ADD
-  System.out.println("Phrase: " + phrase); //temp test code
 
   }
   
