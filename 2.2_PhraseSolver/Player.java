@@ -3,7 +3,6 @@
  * 
  * A Player class the PhraseSolverGame
  */
-import java.util.Scanner;
 
 public class Player
 {
@@ -22,10 +21,10 @@ public void setName(String N){
 public void addPoints(){
   points++;
 }
-public getPoints(){
+public int getPoints(){
   return points;
 }
-public getName(){
+public String getName(){
   return name;
 }
   /* your code here - mutator(s) */ 
