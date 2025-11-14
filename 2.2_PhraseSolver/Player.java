@@ -18,8 +18,8 @@ public Player(){
 public void setName(String N){
   name = N;
 }
-public void addPoints(){
-  points++;
+public void addpoints(int I){
+  points+=I;
 }
 public int getPoints(){
   return points;

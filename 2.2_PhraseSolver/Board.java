@@ -11,9 +11,7 @@ public class Board
   private String solvedPhrase;
   private String phrase;
   private int currentLetterValue; 
-  private String possiblePhrases;
-  private static boolean solved;
-
+  private boolean solved;
   /* your code here - constructor(s) */ 
   public Board() {
     solvedPhrase = "";
@@ -21,18 +19,25 @@ public class Board
     this.setLetterValue();;
     solved = false;
   }
-
+  public String getPhrase(){
+    return phrase;
+  }
+  public void addLetterPoints(Player p){
+    p.addpoints(currentLetterValue);
+  }
   /* your code here - accessor(s) */
   public int getLetterValue(){
     return currentLetterValue;
   }
-
-  public void solvePhrase(String trySolve){
+  public void addWinPoints(Player p){
+    p.addpoints(2000);
+  }
+  public boolean solvePhrase(String trySolve){
      if (trySolve.equals(phrase)){
-      solved=true;
+      return true;
      }
      else
-     solved = false;
+     return false;
 
   }
   public String getSolvedPhrase(){
