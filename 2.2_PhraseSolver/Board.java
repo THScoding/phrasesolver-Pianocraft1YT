@@ -15,15 +15,18 @@ public class Board
   /* your code here - constructor(s) */ 
   public Board() {
     solvedPhrase = "";
-    phrase = this.getSolvedPhrase();
-    this.setLetterValue();;
+    phrase = this.loadPhrase();
+    System.out.println(phrase);
+    System.out.println("Phrase: ^^");
+
+    this.setLetterValue();
     solved = false;
   }
   public String getPhrase(){
     return phrase;
   }
   public void addLetterPoints(Player p){
-    p.addpoints(currentLetterValue);
+    p.addpoints(this.getLetterValue());
   }
   /* your code here - accessor(s) */
   public int getLetterValue(){
