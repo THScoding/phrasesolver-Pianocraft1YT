@@ -36,7 +36,6 @@ public class PhraseSolver
       String name2 = sc.nextLine();
       player2.setName(name2);
       board.loadPhrase();
-      System.out.println(board.getPhrase());
 
       System.out.println(board.getSolvedPhrase());
       setup = true;
@@ -51,14 +50,13 @@ public class PhraseSolver
 System.out.println("You gain "+ board.getLetterValue() + " points if you guess correctly.");
           System.out.println(player1.getName() + ", Guess now!");
                     guess = sc.nextLine();
-          check = board.solvePhrase(guess);
-
+          check = board.isSolved(guess);
           }
           else if (letterOrPhrase.equals("L") || letterOrPhrase.equals("l")){
 System.out.println("You gain "+ board.getLetterValue() + " points if you guess correctly.");
           System.out.println(player1.getName() + ", Guess now!");
           guess = sc.nextLine();
-          check1 = board.guessLetter(guess);
+          check1 = board.isSolved(guess);
           }
           else{
             System.out.println("Invalid Input.");
@@ -88,13 +86,13 @@ System.out.println("You gain "+ board.getLetterValue() + " points if you guess c
 System.out.println("You gain "+ board.getLetterValue() + " points if you guess correctly.");
           System.out.println(player2.getName() + ", Guess now!");
                     guess = sc.nextLine();
-          check = board.solvePhrase(guess);
+          check = board.isSolved(guess);
           }
           else if (letterOrPhrase.equals("L") || letterOrPhrase.equals("l")){
 System.out.println("You gain "+ board.getLetterValue() + " points if you guess correctly.");
           System.out.println(player2.getName() + ", Guess now!");
           guess = sc.nextLine();
-          check1 = board.guessLetter(guess);
+          check1 = board.isSolved(guess);
           }
           if (check){
             solved = true;
@@ -113,9 +111,8 @@ System.out.println("You gain "+ board.getLetterValue() + " points if you guess c
           i++;
           System.out.println(board.getSolvedPhrase());
         }
-      /* your code here - determine how game ends */
     } 
-   // CODE TO ADD
+
 
     }
   
